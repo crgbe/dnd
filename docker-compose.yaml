@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+    apache_server:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        container_name: dnd_server
+        ports:
+        -   "9080:80"
+        volumes:
+        -   "./:/var/www/dnd"
